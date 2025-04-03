@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEAVOUR 6.O - THE AI INVENTOR</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 { color: #2c3e50; }
+        h2 { color: #16a085; }
+        .btn {
+            cursor: pointer;
+            margin: 20px;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+        }
+        #robotAnimation {
+            width: 100%;
+            height: 400px;
+            display: none;
+        }
+        #medicalInfo {
+            display: none;
+            background: #e0f7fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CODEAVOUR 6.O</h1>
+        <h2>THE AI INVENTOR</h2>
+        <img src="robot.png" class="btn" id="robotBtn" alt="Robot Button" width="200">
+        <img src="medical.png" class="btn" id="medicalBtn" alt="Medical Button" width="200">
+        <div id="robotAnimation">
+            <video width="80%" controls>
+                <source src="medical_ai_animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="medicalInfo">
+            <p>Artificial Intelligence is revolutionizing the medical field by enhancing diagnostics, enabling robotic surgeries, personalizing treatment plans, and assisting in drug discovery. AI-driven healthcare solutions improve accuracy, efficiency, and accessibility, making healthcare smarter and more efficient.</p>
+        </div>
+        <div>
+            <img src="IMG_6446.jpg" width="400" alt="Medical Care Robot">
+        </div>
+    </div>
+    <script>
+        document.getElementById("robotBtn").onclick = function() {
+            document.body.style.backgroundColor = "#ffffff";
+            document.getElementById("medicalInfo").style.display = "none";
+            document.getElementById("robotAnimation").style.display = "block";
+        };
+        
+        document.getElementById("medicalBtn").onclick = function() {
+            document.body.style.backgroundColor = "#e0f7fa";
+            document.getElementById("robotAnimation").style.display = "none";
+            document.getElementById("medicalInfo").style.display = "block";
+        };
+    </script>
+</body>
+</html>
